@@ -41,6 +41,10 @@
   flex: 0 0 16.66667%;
   max-width: 16.66667%;
 }
+.l-2-add {
+  flex: 0 0 15.66667%;
+  max-width: 15.66667%;
+}
 .l-2-4 {
   flex: 0 0 20%;
   max-width: 20%;
@@ -199,12 +203,15 @@
   background-repeat:no-repeat ;
   background-position:bottom ;
 }
+.trending {
+  overflow-x: scroll;
+}
 .trending-icon-img {
   width: 100%;
   border-radius: 15px;
 }
 .popular-content {
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
 }
 .trending-title {
   margin: 20px 0;
@@ -223,7 +230,7 @@
 }
 .trending-icon .percent {
   position: absolute;
-    bottom: 122px;
+    bottom: 138px;
     left: 26px;
     padding: 10px;
     background-color: #081C22;
@@ -232,3 +239,34 @@
     border-radius: 50%;
     font-weight: 800;
 }
+
+
+/* ------------------Latest-trailer-------------- */
+.latest-trailer{
+  width: 100%;
+  min-height: 130px;
+  color: white;
+  background-color: #435C71;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+  padding-left: 40px;
+}
+
+.latest-trailer-top{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.latest-trailer-top h1{
+  margin: 0 15px;
+}
+.latest-trailer-option{
+
+}
+.latest-trailer-bottom{
+  margin-left: 15px;
+}
+
+

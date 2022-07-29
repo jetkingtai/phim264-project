@@ -19,7 +19,7 @@ function PopularMovies() {
             <div className="trending row-nowrap">
                 {flims.map(flim => {
                     return (
-                        <div key={flim.id} className="trending-icon col l-2">
+                        <div key={flim.id} className="trending-icon col l-2-add">
                             <img className="trending-icon-img" src={`https://image.tmdb.org/t/p/original${flim.poster_path}`} alt="" />
                             <h4>{flim.title || flim.original_name || flim.original_title}</h4>
                             <span>{flim.release_date || flim.first_air_date}</span>

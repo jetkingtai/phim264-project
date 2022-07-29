@@ -3,6 +3,7 @@ import './App.css';
 import HeaderNav from './Components/HeaderNav';
 import BanApp from './Components/BanApp';
 import PopularMovies from './Components/PopularMovies';
+import LatestTrailer from './Components/LatestTrailer';
 
 
 function App() {
@@ -24,6 +25,10 @@ function App() {
         </div>
         <div className='popular-content'>
           <PopularMovies></PopularMovies>
+        </div>
+
+        <div className='latest-trailer-content'>
+          <LatestTrailer></LatestTrailer>
         </div>
 
       </div>
