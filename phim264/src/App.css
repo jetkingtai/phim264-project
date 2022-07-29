@@ -263,8 +263,29 @@
   margin: 0 15px;
 }
 .latest-trailer-option{
-
+  height: 30px;
+  background-color: white ;
+  display: flex;
+  border-radius: 30px;
+  overflow: hidden;
+  border: 1px solid #67C5B5;
 }
+.latest-trailer-option button {
+  border-radius: 30px;
+  outline: none;
+  border-color:transparent ;
+  background-color: white;
+  padding: 5px 20px;
+  cursor: pointer;
+  transition: linear 0.5s;
+  font-size: 14px;
+  font-weight: 700;
+}
+.latest-trailer-option button:hover {
+  background-color: #67C5B5;
+  color: black;
+}
+
 .latest-trailer-bottom{
   margin-left: 15px;
 }
