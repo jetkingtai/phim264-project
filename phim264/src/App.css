@@ -4,6 +4,86 @@
   box-sizing: border-box;
 }
 
+
+/* ----------Responsive----------- */
+.grid   {
+  width: 100%;
+  display: block;
+  padding: 0;
+}
+.grid.wide  {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.row-nowrap {
+  display: flex;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.col {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.l-0    {
+  display: none;
+}
+.l-1 {
+  flex: 0 0 8.33333%;
+  max-width: 8.33333%;
+}
+.l-2 {
+  flex: 0 0 16.66667%;
+  max-width: 16.66667%;
+}
+.l-2-4 {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+.l-3    {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+.l-4 {
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+}
+.l-5 {
+  flex: 0 0 41.66667%;
+  max-width: 41.66667%;
+}
+.l-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.l-8 {
+  flex: 0 0 66.66667%;
+  max-width: 66.66667%;
+}
+.l-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+.l-10 {
+  flex: 0 0 83.33333%;
+  max-width: 83.33333%;
+}
+.l-11   {
+  flex: 0 0 91.66667%;
+  max-width: 91.66667%;
+}
+.l-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+/* ------------------App-------------- */
+
 .container {
   width: 1140px;
   margin: 0 auto;
@@ -55,4 +135,100 @@
   color: white;
   display: inline-block;
   margin: 0 20px;
+}
+
+
+
+/* ----------Banner---------- */
+
+
+.banner-content {
+  background-image: url('https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,032541,01b4e4)/8bcoRX3hQRHufLPSDREdvr3YMXx.jpg');
+  height: 365px;
+}
+.banner-content .container {
+  height: 100%;
+}
+.banner-content-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+.banner-hi h1,
+.banner-hi h3 {
+  color: white;
+}
+.banner-hi h1 {
+  font-size: 50px;
+}
+.banner-hi h3 {
+  font-size: 25px;
+}
+.search-main {
+  position: relative;
+  width: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.search-main input {
+  width: 100%;
+  padding: 15px;
+  font-size: 15px;
+  outline: none;
+  border: none;
+}
+.search-main button {
+  width: 10%;
+  border: none;
+  background-color: #67C5B5;
+  height: 100%;
+  border-radius: 30px;
+  position: absolute;
+  right: 0;
+  font-size: 16px;
+  color: white;
+  font-weight: 800;
+}
+.search-main button:hover {
+  color: black;
+  cursor: pointer;
+}
+.popular-content {
+  background-image: url('https://www.themoviedb.org/assets/2/v4/misc/trending-bg-39afc2a5f77e31d469b25c187814c0a2efef225494c038098d62317d923f8415.svg');
+  background-repeat:no-repeat ;
+  background-position:bottom ;
+}
+.trending-icon-img {
+  width: 100%;
+  border-radius: 15px;
+}
+.popular-content {
+  overflow-y: scroll;
+}
+.trending-title {
+  margin: 20px 0;
+  display: inline-block;
+}
+.trending-icon span {
+  color: #666666;
+  font-size: 14px;
+}
+.trending-icon h4 {
+  margin-top: 20px;
+}
+.trending-icon {
+  height: 400px;
+  position: relative;
+}
+.trending-icon .percent {
+  position: absolute;
+    bottom: 122px;
+    left: 26px;
+    padding: 10px;
+    background-color: #081C22;
+    color: white;
+    font-size: 14px;
+    border-radius: 50%;
+    font-weight: 800;
 }
