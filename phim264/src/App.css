@@ -210,9 +210,6 @@
   width: 100%;
   border-radius: 15px;
 }
-.popular-content {
-  /* overflow-y: scroll; */
-}
 .trending-title {
   margin: 20px 0;
   display: inline-block;
@@ -288,6 +285,23 @@
 
 .latest-trailer-bottom{
   margin-left: 15px;
+}
+
+
+.footer-content {
+  background-color: #022441;
+  color: white;
+}
+
+.footer-list {
+  list-style: none;
+}
+.footer-list :nth-child(1) {
+  font-size: 22px;
+  font-weight: 800;
+}
+.footer-list li{
+  margin: 10px;
 }
 
 
