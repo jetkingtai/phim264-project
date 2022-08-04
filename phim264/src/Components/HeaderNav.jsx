@@ -1,9 +1,13 @@
+import { Link } from "react-router-dom"
+
 function HeaderNav() {
     return (
         <div className="header">
             <div className="header-left">
                 <div className="logo-main">
-                    <h2>phim264</h2>
+                    <Link to="/">
+                        <h2>phim264</h2>
+                    </Link>         
                 </div>
 
                 <div className="header-nav">

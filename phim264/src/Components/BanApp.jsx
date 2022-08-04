@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useEffect, useState, createContext } from "react";
-import ListFlim from "./ListFlim";
-
+import { useNavigate } from "react-router-dom";
 export const listXin = createContext()
 
 
@@ -9,20 +8,13 @@ export const listXin = createContext()
 function BanApp() {
 
     const [flims, setFlims] = useState([])
-    let keyWord = ''
-    let listFlimsChien = []
+    const [keyWord, setKeyWord] = useState('')
+    const navigate = useNavigate()
     const handleChange = (e) => {
-        keyWord = e.target.value;
+        setKeyWord(e.target.value)
     }
-    const handleClick = (e) => {
-        axios({
-            method: 'GET',
-            url: `
-            https://api.themoviedb.org/3/search/movie?api_key=6f938045d8743e7d4bfeea034f3349bc&language=en-US&query=${keyWord}&page=1&include_adult=false`,
-            data: null
-            }).then(res => {
-            setFlims(res.data.results)
-        });
+    const handleClick = () => {
+        navigate(`/search/${keyWord}`)
     }
 
 
@@ -40,7 +32,12 @@ function BanApp() {
 
                     
                     <div className="search-main">
-                        <input onChange={handleChange} placeholder="Search for a movie, tv show, person......" type="text" />
+                        <input 
+                            onChange={handleChange} 
+                            placeholder="Search for a movie, tv show, person......" 
+                            type="text"
+                            value={keyWord} 
+                        />
                         <button onClick={handleClick}>Search</button>
                     </div>
                 </div>
