@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import ListFlim from './Components/ListFlim';
 import HomePage from './Pages/HomePages/HomePage'
 import SearchPage from './Pages/SearchPage/SearchPage'
+import DetailPage from './Pages/DetailPage/DetailPage';
+
 
 
 
@@ -22,6 +24,7 @@ function App() {
         
         <Route path="/" exact element={<HomePage></HomePage>}></Route>
         <Route path="/search/:keywork" exact element={<SearchPage></SearchPage>}></Route>
+        <Route path="/detail/:id" exact element={<DetailPage></DetailPage>}></Route>
       </Routes>
 
       <div className='footer-content'>

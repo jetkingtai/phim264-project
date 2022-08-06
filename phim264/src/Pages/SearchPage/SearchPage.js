@@ -1,11 +1,12 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate, Navigate } from "react-router-dom";
 
 function SearchPage() {
     const [searchMovies, setSearchMovies] = useState([])
     const params = useParams();
     const keyWork = params?.keywork
+    const navigate = useNavigate()
     useEffect(() => {
         axios({
             method: 'GET',
@@ -21,7 +22,7 @@ function SearchPage() {
             {<div className="trending row mt20">
                 {searchMovies.map(searchMovie => {
                     return (
-                        <div key={searchMovie.id} className="trending-icon col l-2">
+                        <div onClick={() => {navigate(`/detail/${searchMovie.id}`)}} id={searchMovie.id} key={searchMovie.id} className="trending-icon col l-2">
                             <img className="trending-icon-img" src={`https://image.tmdb.org/t/p/original${searchMovie.poster_path}`} alt="" />
                             <h4>{searchMovie.title || searchMovie.original_name || searchMovie.original_title}</h4>
                             <span>{searchMovie.release_date || searchMovie.first_air_date}</span>

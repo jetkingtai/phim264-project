@@ -308,3 +308,33 @@
 }
 
 
+
+
+/* ------------Detail-page------- */
+.detail-content-main {
+  display: flex;
+  margin-top: 20px;
+}
+.detail-content-main img {
+  width: 100%;
+  border-radius: 30px;
+}
+.detailpage-content-parent {
+  position: relative;
+  height: fit-content;
+}
+
+.detai-background {
+  opacity: 0.2;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.detailpage-content {
+  height: 100%;
+}
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
